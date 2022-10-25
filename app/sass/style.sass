@@ -1,0 +1,384 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #E5E9FA
+  color: #4A4A4A
+
+html, body
+  overflow-x: hidden
+  height: 100%
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+  width: fit-content
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  box-sizing: border-box
+  font-family: $default-font
+  width: 100%
+  height: 45px
+  border: 1px solid #D3D9F0
+    radius: 10px
+  padding: 0 19px
+  background: rgba(244, 246, 254, 0.8)
+  color: #4A4A4A
+  &::placeholder
+    color: #4A4A4A
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+select
+  cursor: pointer
+
+label
+  display: block
+  width: 100%
+
+button, .btn
+  outline: none
+  transition: .3s ease
+  cursor: pointer
+  box-shadow: none
+  font-family: $default-font
+  font-size: 22px
+  font-weight: normal
+  padding: 0 50px
+  margin: 0
+  border: none
+    radius: 10px
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.btn-accent
+  color: #fff
+  background: $accent
+
+  &:hover
+    background: $red
+    color: inherit
+
+.btn-blue
+  color: #002E5A
+  padding: 4.5px 11px
+  border: 1px solid #69A7E2
+    radius: 6px
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.07)
+  background: #75C9FF
+  &:hover
+    background: $accent
+    color: #fff
+    img
+      filter: invert(1)
+
+.btn-export
+  font-size: 14px
+  &__icon
+    width: 16px
+    margin: 0 0 0 7px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+strong, b
+  font-weight: bold
+  display: inline-block
+
+ul, ol
+  padding: 0 0 0 20px
+
+.my-ul
+  list-style: none
+  padding: 0
+
+.mb-20
+  margin-bottom: 20px
+
+.mb-30
+  margin-bottom: 30px
+
+.mb-65
+  margin-bottom: 65px
+
+.wrapper
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.content
+  flex: 1 0 auto
+
+
+.container
+  max-width: 1862px
+  padding: 0 30px
+
+.row
+  margin: 0 -30px
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+  padding: 0 30px
+
+h1
+  color: #4A4A4A
+  font-size: 32px
+  font-weight: 300
+
+.title-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  h1
+    margin: 0 auto 0 0
+
+
+.pagination-nav
+  margin: 25px auto 0
+  width: 100%
+
+.pagination
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  li
+    margin: 0 10px 0 0
+    &:last-child
+      margin: 0
+  .page-link
+    width: 35px
+    height: 35px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    border: 1px solid #E5E9FA
+      radius: 50%
+    color: #1D61A1
+    font-size: 13px
+    font-weight: normal
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.06)
+
+.page-item:first-child .page-link, .page-item:last-child .page-link
+  border-radius: 50%
+
+.page-item.active .page-link
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.06)
+  background: #1D61A1
+  border-color: transparent
+
+
+.label-select
+  position: relative
+  margin: 0 21px 25px 0
+
+  &:before
+    content: ''
+    position: absolute
+    width: 1px
+    height: 34px
+    background: #E7E9F0
+    right: 47px
+    top: 50%
+    transform: translate(0,-50%)
+
+.select-my
+  padding: 0 47px 0 18px
+  appearance: none
+  color: #356899
+  font-size: 16px
+  font-weight: normal
+  background: #FFFFFF url("../img/arrow-select.svg") no-repeat calc(100% - 19px) center
+    size: 10px
+  border: none
+    radius: 6px
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.07)
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year
+  border: none
+    radius: 0
+  padding: 0
+  height: auto
+  width: fit-content
+  text-align: center
+  background: transparent
+  margin: 0
+  font-weight: bold
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+  width: 100%
+  text-align: center
+  border: none
+  background: #F4F6FE
+
+.ui-widget-header
+  background: #F4F6FE
+  border: none
+    radius: 0
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight
+  background: $accent
+  color: #fff
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
+  background: #5895D1
+
+.table-wrapper
+  overflow-x: auto
+  width: 100%
+
+.table
+  width: 100%
+  font-size: 16px
+  font-family: $default-font
+  font-weight: normal
+  margin: 0
+  border-collapse: separate
+  thead
+    color: #002E5A
+    th
+      border: 1px solid #E5E9FA
+      background: #fff
+      vertical-align: middle
+      padding: 14px
+      text-align: center
+      &:first-child
+        min-width: 89px
+        border-radius: 10px 0 0 0
+      &:last-child
+        border-radius: 0 10px 0 0
+  td
+    border: 1px solid #E5E9FA
+    background: #fff
+    padding: 14px 8px
+    text-align: center
+    vertical-align: middle
+    &:first-child
+      min-width: 89px
+  tr
+    &:nth-child(odd)
+      td
+        background: #F4F6FE
+  tbody
+    color: #4A4A4A
+    font-size: 16px
+    font-family: $default-font
+  p
+    max-width: 275px
+    margin: 0 auto
+
+.link-status
+  display: flex
+  align-items: center
+  justify-content: center
+  text-transform: uppercase
+  font-size: 13px
+  padding: 2px 10px
+  line-height: 16px
+  border-radius: 6px 0px
+  width: fit-content
+
+.status-completed
+  border: 1px solid #52A321
+  background: #BED895
+  color: #2B6706
+  &:hover
+    color: #fff
+
+.link-download
+  display: flex
+  align-items: center
+  color: #1C5F9E
+  font-size: 16px
+  margin: 0 auto
+  &__text
+    text-decoration: underline
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 10px 0 0
+    width: 17px
+    min-width: 17px
+  &:hover
+    color: $red
+
+.breadcrumb-nav
+  width: 100%
+  margin: 12px 0 37px

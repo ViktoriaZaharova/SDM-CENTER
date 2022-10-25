@@ -1,0 +1,30 @@
+/*==========  section footer ==========*/
+footer {
+  margin: 52px 0 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  min-height: 60px;
+  background: #002E5A;
+  color: #ffff;
+  position: relative;
+  z-index: 1; }
+  footer:before, footer:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0; }
+  footer:after {
+    right: 0;
+    background: url("../img/figure-footer2.svg") no-repeat center;
+      background-size: 100%;
+    width: 362px; }
+  footer:before {
+    width: 395px;
+    left: 465px;
+    background: url("../img/figure-footer1.svg") no-repeat center;
+      background-size: 100%; }
+
+/*==========  section footer end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/

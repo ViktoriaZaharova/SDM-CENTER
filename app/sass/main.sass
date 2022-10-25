@@ -1,0 +1,412 @@
+@import "vars"
+
+/*==========  section filter-wrapper ==========*/
+.filter-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+
+.label-select
+  max-width: 505px
+  width: 100%
+
+.dates-wrapper
+  display: flex
+  align-items: flex-start
+  width: 100%
+
+.filter-button
+  display: flex
+  align-items: stretch
+  margin: 0 0 0 auto
+
+.filter-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.07)
+  width: 65px
+  height: 43px
+  &:first-child
+    border-radius: 6px 0 0 6px
+  &:last-child
+    border-radius: 0 6px 6px 0
+  .svg-icon
+    width: 23px
+    height: 19px
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 10px
+    right: 13px
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background: #fff
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+    &:before
+      width: 8px
+      height: 1px
+    &:after
+      width: 1px
+      height: 8px
+
+.filter-btn-minus
+  border: 1px solid rgba(249, 104, 104, 0.6)
+  background: #F8BCBC
+  .svg-icon
+    fill: #BE1C1C
+  .filter-btn__icon
+    border: 1px solid #E42626
+    &:before
+      background: #BE1C1C
+
+
+.filter-btn-plus
+  border: 1px solid rgba(115, 187, 71, 0.6)
+  background: #BED895
+  .svg-icon
+    fill: #2F680D
+  .filter-btn__icon
+    border: 1px solid #52A321
+    &:before, &:after
+      background: #52A321
+
+
+.datepicker-wrapper
+  display: flex
+  align-items: stretch
+
+.datepicker-item
+
+  position: relative
+  display: flex
+  align-items: stretch
+  &__icon
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    border-radius: 6px 0 0 6px
+    background: #E5E9FA
+    width: 45px
+    min-width: 45px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #012F5B
+  input
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.07)
+    background: #fff
+    padding: 0 45px
+    text-align: center
+    width: 275px
+    color: #356899
+    border: none
+    &::placeholder
+      color: #356899
+  &:first-child
+    input
+      border-radius: 6px 0 0 6px
+  &:last-child
+    .datepicker-item__icon
+      position: relative
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.07)
+      background: #E5E9FA
+      border-radius: 0
+
+    input
+      border-radius: 0 6px 6px 0
+
+/*==========  section filter-wrapper end  ==========*/
+
+/*==========  section sidebar ==========*/
+.sidebar
+  position: relative
+  z-index: 1
+  max-width: 284px
+  width: 100%
+  border-radius: 15px 0 0 15px
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: calc(100% - 32px)
+    left: 0
+    top: 0
+    border-radius: 15px 0 0 15px
+    background: #5895D1
+    z-index: -1
+
+.menu
+  width: 100%
+  font-size: 22px
+  font-weight: 300
+  line-height: 27px
+  li
+    width: 100%
+    &:last-child
+      a
+        &:before
+          display: none
+    &:first-child
+      a.active
+        &:after
+          border-radius: 9px 0 0 9px
+
+.menu-link
+  color: #fff
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 1
+  padding: 18px 10px 15px 18px
+  width: 100%
+  &:before
+    content: ''
+    position: absolute
+    z-index: -1
+    bottom: 0
+    right: 0
+    height: 2px
+    width: calc(100% - 18px)
+    background: url('../img/line-menu.svg') no-repeat center
+      size: 100%
+  &:after
+    content: ''
+    width: 100%
+    height: 100%
+    z-index: -1
+    position: absolute
+    left: 0
+    top: 0
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 20px 0 0
+    width: 14px
+    height: 14px
+    min-width: 14px
+    fill: #fff
+    transition: .3s ease
+  &:hover
+    color: $accent
+    .menu-link__icon
+      fill: $accent
+  &.active
+    color: $red
+    .menu-link__icon
+      fill: $red
+    &:after
+      //box-shadow: 0 0 8px rgba(0, 0, 0, 0.05)
+      background: #fff
+
+
+.content-row
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.content-wrapper
+  background: #fff
+  min-height: 1017px
+  width: calc(100% - 284px)
+  padding: 34px 32px 65px
+
+
+/*==========  section sidebar end  ==========*/
+
+/*==========  section order-item ==========*/
+.order-item
+  margin: 0 0 42px
+  &:last-child
+    margin: 0
+  h3
+    color: #4A4A4A
+    font-size: 24px
+    font-weight: 300
+  &__head
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 0 0 16px
+
+.list-info
+  width: 100%
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.07))
+  border-radius: 10px 0px 0px 0px
+  color: #002E5A
+  li
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    &:first-child
+      p
+        border-radius: 10px 0px 0px 0px
+      span
+        border-radius: 0px 10px 0px 0px
+    &:last-child
+      p
+        border-radius: 0px 0px 0px 10px
+      span
+        border-radius: 0px 0px 10px 0px
+  p, span
+    width: 50%
+    padding: 15px 24px
+    border: 1px solid #E5E9FA
+  p
+    background: #F4F6FE
+  span
+    color: #4A4A4A
+
+/*==========  section order-item end  ==========*/
+
+/*==========  section callback-wrapper ==========*/
+.callback-wrapper
+  max-width: 1273px
+  width: 100%
+  margin: 30px auto 0
+
+.callback-item
+  max-width: 262px
+  min-height: 247px
+  margin: 0 auto
+  width: 100%
+  height: 100%
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  background: #fff
+  border: 1px solid #BBC8FF
+    radius: 20px 0
+  text-align: center
+  padding: 63px 10px 24px
+  color: #0C4478
+  font-size: 24px
+  font-weight: 300
+  &:hover
+    color: #000
+    transform: translateY(-10px)
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto 30px
+
+/*==========  section callback-wrapper end  ==========*/
+
+/*==========  section documents page ==========*/
+.btn-accordion
+  padding: 4.5px 0
+  font-size: 14px
+  font-weight: normal
+  width: fit-content
+  &__text
+    border-right: 1px solid #69A7E2
+    &:before
+      content: 'Свернуть'
+      display: inline-block
+      margin: 0 10px 0 14px
+  &__icon
+    margin: 0 8px
+    transform: rotate(180deg)
+    min-width: 8px
+
+.accordion>.card:not(:last-of-type)
+  border: none
+
+
+.accordion>.card>.card-header
+  margin-bottom: 0
+  padding: 0
+  background: transparent
+  border: none
+  color: #4A4A4A
+  font-size: 24px
+  font-weight: 300
+
+.accordion
+  table
+    text-align: left
+    th, td
+      text-align: left
+    th
+      padding: 13px 22px
+    td
+      padding: 8px 22px
+  .card
+    margin: 0 0 32px
+    border: none
+      radius: 0
+    &:last-child
+      margin: 0
+    h3
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 0 0 20px
+  .collapsed
+    border: none
+      bottom: 1px solid #E5E9FA
+    .btn-accordion__text
+      &:before
+        content: 'Подробнее'
+    .btn-accordion__icon
+      transform: none
+
+.card-body
+  padding: 5px 0 55px
+/*==========  section documents page end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/

@@ -1,0 +1,465 @@
+@charset "UTF-8";
+/*==========  section filter-wrapper ==========*/
+.filter-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.label-select {
+  max-width: 505px;
+  width: 100%; }
+
+.dates-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%; }
+
+.filter-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0 0 0 auto; }
+
+.filter-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.07);
+  width: 65px;
+  height: 43px; }
+  .filter-btn:first-child {
+    border-radius: 6px 0 0 6px; }
+  .filter-btn:last-child {
+    border-radius: 0 6px 6px 0; }
+  .filter-btn .svg-icon {
+    width: 23px;
+    height: 19px; }
+  .filter-btn__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff; }
+    .filter-btn__icon:before, .filter-btn__icon:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .filter-btn__icon:before {
+      width: 8px;
+      height: 1px; }
+    .filter-btn__icon:after {
+      width: 1px;
+      height: 8px; }
+
+.filter-btn-minus {
+  border: 1px solid rgba(249, 104, 104, 0.6);
+  background: #F8BCBC; }
+  .filter-btn-minus .svg-icon {
+    fill: #BE1C1C; }
+  .filter-btn-minus .filter-btn__icon {
+    border: 1px solid #E42626; }
+    .filter-btn-minus .filter-btn__icon:before {
+      background: #BE1C1C; }
+
+.filter-btn-plus {
+  border: 1px solid rgba(115, 187, 71, 0.6);
+  background: #BED895; }
+  .filter-btn-plus .svg-icon {
+    fill: #2F680D; }
+  .filter-btn-plus .filter-btn__icon {
+    border: 1px solid #52A321; }
+    .filter-btn-plus .filter-btn__icon:before, .filter-btn-plus .filter-btn__icon:after {
+      background: #52A321; }
+
+.datepicker-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.datepicker-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+  .datepicker-item__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 6px 0 0 6px;
+    background: #E5E9FA;
+    width: 45px;
+    min-width: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #012F5B; }
+  .datepicker-item input {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.07);
+    background: #fff;
+    padding: 0 45px;
+    text-align: center;
+    width: 275px;
+    color: #356899;
+    border: none; }
+    .datepicker-item input::-webkit-input-placeholder {
+      color: #356899; }
+    .datepicker-item input::-moz-placeholder {
+      color: #356899; }
+    .datepicker-item input::-ms-input-placeholder {
+      color: #356899; }
+    .datepicker-item input::placeholder {
+      color: #356899; }
+  .datepicker-item:first-child input {
+    border-radius: 6px 0 0 6px; }
+  .datepicker-item:last-child .datepicker-item__icon {
+    position: relative;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.07);
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.07);
+    background: #E5E9FA;
+    border-radius: 0; }
+  .datepicker-item:last-child input {
+    border-radius: 0 6px 6px 0; }
+
+/*==========  section filter-wrapper end  ==========*/
+/*==========  section sidebar ==========*/
+.sidebar {
+  position: relative;
+  z-index: 1;
+  max-width: 284px;
+  width: 100%;
+  border-radius: 15px 0 0 15px; }
+  .sidebar:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 32px);
+    left: 0;
+    top: 0;
+    border-radius: 15px 0 0 15px;
+    background: #5895D1;
+    z-index: -1; }
+
+.menu {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 27px; }
+  .menu li {
+    width: 100%; }
+    .menu li:last-child a:before {
+      display: none; }
+    .menu li:first-child a.active:after {
+      border-radius: 9px 0 0 9px; }
+
+.menu-link {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 18px 10px 15px 18px;
+  width: 100%; }
+  .menu-link:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: calc(100% - 18px);
+    background: url("../img/line-menu.svg") no-repeat center;
+      background-size: 100%; }
+  .menu-link:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .menu-link__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 20px 0 0;
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    fill: #fff;
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+  .menu-link:hover {
+    color: #0B4275; }
+    .menu-link:hover .menu-link__icon {
+      fill: #0B4275; }
+  .menu-link.active {
+    color: #E42626; }
+    .menu-link.active .menu-link__icon {
+      fill: #E42626; }
+    .menu-link.active:after {
+      background: #fff; }
+
+.content-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.content-wrapper {
+  background: #fff;
+  min-height: 1017px;
+  width: calc(100% - 284px);
+  padding: 34px 32px 65px; }
+
+/*==========  section sidebar end  ==========*/
+/*==========  section order-item ==========*/
+.order-item {
+  margin: 0 0 42px; }
+  .order-item:last-child {
+    margin: 0; }
+  .order-item h3 {
+    color: #4A4A4A;
+    font-size: 24px;
+    font-weight: 300; }
+  .order-item__head {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 16px; }
+
+.list-info {
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.07));
+          filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.07));
+  border-radius: 10px 0px 0px 0px;
+  color: #002E5A; }
+  .list-info li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .list-info li:first-child p {
+      border-radius: 10px 0px 0px 0px; }
+    .list-info li:first-child span {
+      border-radius: 0px 10px 0px 0px; }
+    .list-info li:last-child p {
+      border-radius: 0px 0px 0px 10px; }
+    .list-info li:last-child span {
+      border-radius: 0px 0px 10px 0px; }
+  .list-info p, .list-info span {
+    width: 50%;
+    padding: 15px 24px;
+    border: 1px solid #E5E9FA; }
+  .list-info p {
+    background: #F4F6FE; }
+  .list-info span {
+    color: #4A4A4A; }
+
+/*==========  section order-item end  ==========*/
+/*==========  section callback-wrapper ==========*/
+.callback-wrapper {
+  max-width: 1273px;
+  width: 100%;
+  margin: 30px auto 0; }
+
+.callback-item {
+  max-width: 262px;
+  min-height: 247px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid #BBC8FF;
+    border-radius: 20px 0;
+  text-align: center;
+  padding: 63px 10px 24px;
+  color: #0C4478;
+  font-size: 24px;
+  font-weight: 300; }
+  .callback-item:hover {
+    color: #000;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  .callback-item__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 30px; }
+
+/*==========  section callback-wrapper end  ==========*/
+/*==========  section documents page ==========*/
+.btn-accordion {
+  padding: 4.5px 0;
+  font-size: 14px;
+  font-weight: normal;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+  .btn-accordion__text {
+    border-right: 1px solid #69A7E2; }
+    .btn-accordion__text:before {
+      content: 'Свернуть';
+      display: inline-block;
+      margin: 0 10px 0 14px; }
+  .btn-accordion__icon {
+    margin: 0 8px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    min-width: 8px; }
+
+.accordion > .card:not(:last-of-type) {
+  border: none; }
+
+.accordion > .card > .card-header {
+  margin-bottom: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #4A4A4A;
+  font-size: 24px;
+  font-weight: 300; }
+
+.accordion table {
+  text-align: left; }
+  .accordion table th, .accordion table td {
+    text-align: left; }
+  .accordion table th {
+    padding: 13px 22px; }
+  .accordion table td {
+    padding: 8px 22px; }
+
+.accordion .card {
+  margin: 0 0 32px;
+  border: none;
+    border-radius: 0; }
+  .accordion .card:last-child {
+    margin: 0; }
+  .accordion .card h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 0 20px; }
+
+.accordion .collapsed {
+  border: none;
+    border-bottom: 1px solid #E5E9FA; }
+  .accordion .collapsed .btn-accordion__text:before {
+    content: 'Подробнее'; }
+  .accordion .collapsed .btn-accordion__icon {
+    -webkit-transform: none;
+            transform: none; }
+
+.card-body {
+  padding: 5px 0 55px; }
+
+/*==========  section documents page end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/
