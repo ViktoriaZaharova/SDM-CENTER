@@ -73,16 +73,17 @@
             <div class="content-row">
               <nav class="breadcrumb-nav">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Настройка профиля</li>
+                  <li class="breadcrumb-item"><a href="rent.html">Аренда</a></li>
+                  <li class="breadcrumb-item"><a href="#">Пропуска</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Изменение данных пропуска</li>
                 </ol>
               </nav>
 
               <div class="main-box">
-                <h1>Настройки профиля</h1>
+                <h1>Изменение данных пропуска</h1>
 
                 <div class="main-box-item">
-                  <h3>Информация о пользователе</h3>
+                  <h3>ФИО и контакты заявителя</h3>
 
                   <form method="post" class="form form-settings">
                     <div class="row">
@@ -113,11 +114,8 @@
                       </div>
                       <div class="col-12 col-sm-6 col-md-4 mb-25">
                         <label>
-                          <input type="text" placeholder="yuri.fedorov@star-smile.ru" name="mail">
+                          <input type="text" placeholder='ООО "Стар Смайл"' name="company" class="font-bold">
                         </label>
-                      </div>
-                      <div class="col-12 mb-25">
-                        <button type="submit" class="btn btn-accent btn-save">Сохранить</button>
                       </div>
                     </div>
                   </form>
@@ -125,35 +123,79 @@
               </div>
               <div class="main-box">
                 <div class="main-box-item">
-                  <h3>Изменение пароля</h3>
+                  <h3>Старые данные владельца пропуска</h3>
 
                   <form method="post" class="form form-settings">
                     <div class="row">
-                      <div class="col-12 col-sm-6 col-md-4 mb-12">
+                      <div class="col-12 col-sm-6 col-md-4 mb-25">
                         <label>
-                          <input type="text" placeholder="Старый пароль*" class="inp-disabled" name="old_password" required>
+                          <input type="text" placeholder="Ваша фамилия*" class="inp-disabled" name="first_name">
                         </label>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-4 mb-12">
+                      <div class="col-12 col-sm-6 col-md-4 mb-25">
                         <label>
-                          <input type="text" placeholder="Новый пароль*" class="inp-disabled" name="new_password" required>
+                          <input type="text" placeholder="Ваше имя*" class="inp-disabled" name="name">
                         </label>
                       </div>
-                      <div class="col-12 col-sm-6 col-md-4 mb-12">
+                      <div class="col-12 col-md-4 mb-25">
                         <label>
-                          <input type="text" placeholder="Повторите пароль*" class="inp-disabled" name="double_password" required>
+                          <input type="text" placeholder="Отчество" class="inp-disabled" name="last_name">
                         </label>
                       </div>
-                      <div class="col-12 mb-25">
-                        <div class="attention-form">*Пароль должен содержать более 6 символов, включая прописные и заглавные латинские буквы и цифры</div>
+                      <div class="col-12 col-md-8 mb-25">
+                        <label>
+                          <input type="text" placeholder="Список автомобилей" class="inp-disabled inp-list" name="last_name">
+                          <a href="#" class="btn-add-list"></a>
+                        </label>
                       </div>
-                      <div class="col-12 mb-25">
-                        <button type="submit" class="btn btn-red btn-save">Обновить пароль</button>
+                      <div class="col-12 col-md-4 mb-25">
+                        <label>
+                          <input type="text" placeholder="Телефон*" class="inp-disabled" name="phone">
+                        </label>
                       </div>
                     </div>
                   </form>
                 </div>
               </div>
+
+              <div class="main-box">
+                <div class="main-box-item">
+                  <h3>Новые данные владельца пропуска</h3>
+
+                  <form method="post" class="form form-settings">
+                    <div class="row">
+                      <div class="col-12 col-sm-6 col-md-4 mb-25">
+                        <label>
+                          <input type="text" placeholder="Ваша фамилия*" class="inp-disabled" name="first_name">
+                        </label>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4 mb-25">
+                        <label>
+                          <input type="text" placeholder="Ваше имя*" class="inp-disabled" name="name">
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-4 mb-25">
+                        <label>
+                          <input type="text" placeholder="Отчество" class="inp-disabled" name="last_name">
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-8 mb-25">
+                        <label>
+                          <input type="text" placeholder="Список автомобилей" class="inp-disabled inp-list" name="last_name">
+                          <a href="#" class="btn-add-list"></a>
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-4 mb-25">
+                        <label>
+                          <input type="text" placeholder="Телефон*" class="inp-disabled" name="phone">
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-red btn-save">Создать заявку</button>
             </div>
 
           </div>

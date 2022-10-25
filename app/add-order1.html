@@ -73,16 +73,19 @@
             <div class="content-row">
               <nav class="breadcrumb-nav">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Настройка профиля</li>
+                  <li class="breadcrumb-item"><a href="rent.html">Аренда</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Внос/вынос имущества</li>
                 </ol>
               </nav>
 
               <div class="main-box">
-                <h1>Настройки профиля</h1>
+
 
                 <div class="main-box-item">
-                  <h3>Информация о пользователе</h3>
+                  <div class="title-wrapper">
+                    <h3>ФИО и контакты заявителя</h3>
+                    <div class="link-status status-draft">черновик не сохранен</div>
+                  </div>
 
                   <form method="post" class="form form-settings">
                     <div class="row">
@@ -113,47 +116,104 @@
                       </div>
                       <div class="col-12 col-sm-6 col-md-4 mb-25">
                         <label>
-                          <input type="text" placeholder="yuri.fedorov@star-smile.ru" name="mail">
+                          <input type="text" placeholder='yuri.fedorov@star-smile.ru' name="mail">
                         </label>
-                      </div>
-                      <div class="col-12 mb-25">
-                        <button type="submit" class="btn btn-accent btn-save">Сохранить</button>
                       </div>
                     </div>
                   </form>
                 </div>
               </div>
+
+
+              <div class="main-box main-box-info">
+                <div class="main-box-item">
+                  <h3>Информация о мероприятии</h3>
+
+                  <div class="attention-form">*Пароль должен содержать более 6 символов, включая прописные и заглавные
+                    латинские буквы и цифры
+                  </div>
+
+                  <form method="post" class="form form-settings filter-wrapper">
+
+                    <label class="label-select">
+                      <select name="select" class="select-my">
+                        <option value="Внос / вынос">Внос / вынос</option>
+                        <option value="Внос / вынос">Внос / вынос</option>
+                        <option value="Внос / вынос">Внос / вынос</option>
+                      </select>
+                    </label>
+
+                    <div class="dates-wrapper">
+                      <div class="datepicker-wrapper">
+                        <div class="datepicker-item">
+                          <div class="datepicker-item__icon"><img src="img/calendar.svg" alt=""></div>
+                          <input type="text" placeholder="Начало меропрития" class="datepicker1 datepicker">
+                        </div>
+                        <div class="datepicker-item">
+                          <div class="datepicker-item__icon"><img src="img/time.svg" alt=""></div>
+                          <input type="text" placeholder="Укажите время" class="timepicker1 datepicker">
+                        </div>
+                      </div>
+
+                      <div class="datepicker-wrapper">
+                        <div class="datepicker-item">
+                          <div class="datepicker-item__icon"><img src="img/calendar.svg" alt=""></div>
+                          <input type="text" placeholder="Начало меропрития" class="datepicker2 datepicker">
+                        </div>
+                        <div class="datepicker-item">
+                          <div class="datepicker-item__icon"><img src="img/time.svg" alt=""></div>
+                          <input type="text" placeholder="Укажите время" class="timepicker1 datepicker">
+                        </div>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+
               <div class="main-box">
                 <div class="main-box-item">
-                  <h3>Изменение пароля</h3>
+                  <h3>Список имущества</h3>
 
-                  <form method="post" class="form form-settings">
-                    <div class="row">
-                      <div class="col-12 col-sm-6 col-md-4 mb-12">
-                        <label>
-                          <input type="text" placeholder="Старый пароль*" class="inp-disabled" name="old_password" required>
-                        </label>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-4 mb-12">
-                        <label>
-                          <input type="text" placeholder="Новый пароль*" class="inp-disabled" name="new_password" required>
-                        </label>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-4 mb-12">
-                        <label>
-                          <input type="text" placeholder="Повторите пароль*" class="inp-disabled" name="double_password" required>
-                        </label>
-                      </div>
-                      <div class="col-12 mb-25">
-                        <div class="attention-form">*Пароль должен содержать более 6 символов, включая прописные и заглавные латинские буквы и цифры</div>
-                      </div>
-                      <div class="col-12 mb-25">
-                        <button type="submit" class="btn btn-red btn-save">Обновить пароль</button>
-                      </div>
-                    </div>
-                  </form>
+                  <div class="table-wrapper">
+                    <table class="table table-property">
+                      <thead>
+                      <tr>
+                        <th>Номер</th>
+                        <th>Название</th>
+                        <th>Количество</th>
+                        <th></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <p>Стул офисный</p>
+                        </td>
+                        <td>
+                          <p>2</p>
+                        </td>
+
+                        <td>
+                          <a href="#" class="link-download link-delete" target="_blank" download="#">
+                            <span class="link-download__icon"><img src="img/delete.svg" alt=""></span>
+                            <span class="link-download__text">Удалить</span>
+                          </a>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <a href="#" class="btn btn-blue btn-add-property">
+                    <span class="btn-icon"><img src="img/add-icon.svg" alt=""></span>
+                    <span class="btn-text">Добавить имущество</span>
+                  </a>
                 </div>
               </div>
+
+              <button type="submit" class="btn btn-red btn-save">Создать заявку</button>
             </div>
 
           </div>

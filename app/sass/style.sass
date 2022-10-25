@@ -50,7 +50,7 @@ body
 
 html, body
   overflow-x: hidden
-  height: 100%
+  //height: 100%
 
 img
   display: block
@@ -75,6 +75,7 @@ input, textarea, select
   appearance: none
   box-sizing: border-box
   font-family: $default-font
+  font-size: 16px
   width: 100%
   height: 45px
   border: 1px solid #D3D9F0
@@ -89,12 +90,21 @@ input, textarea, select
     outline: none
     box-shadow: none
 
+.inp-disabled
+  color: #969696
+  &::placeholder
+    color: #969696
+
+.inp-list
+  padding-right: 76px
+
 select
   cursor: pointer
 
 label
   display: block
   width: 100%
+  position: relative
 
 button, .btn
   outline: none
@@ -125,7 +135,7 @@ button, .btn
 
   &:hover
     background: $red
-    color: inherit
+    color: #fff
 
 .btn-blue
   color: #002E5A
@@ -139,6 +149,18 @@ button, .btn
     color: #fff
     img
       filter: invert(1)
+
+.btn-red
+  background: #E42626
+  color: #fff
+  &:hover
+    background: $accent
+    color: #fff
+
+.btn-save
+  padding: 15px 50px
+  margin: 15px 0 0
+
 
 .btn-export
   font-size: 14px
@@ -165,14 +187,23 @@ ul, ol
   list-style: none
   padding: 0
 
+.mb-12
+  margin-bottom: 12px
+
 .mb-20
   margin-bottom: 20px
+
+.mb-25
+  margin-bottom: 25px
 
 .mb-30
   margin-bottom: 30px
 
 .mb-65
   margin-bottom: 65px
+
+.font-bold
+  font-weight: bold
 
 .wrapper
   width: 100%
@@ -351,7 +382,7 @@ h1
   font-size: 13px
   padding: 2px 10px
   line-height: 16px
-  border-radius: 6px 0px
+  border-radius: 6px 0
   width: fit-content
 
 .status-completed
@@ -360,6 +391,12 @@ h1
   color: #2B6706
   &:hover
     color: #fff
+
+.status-draft
+  color: #B34000
+  background: #FFE0B3
+  border: 1px solid #FBBA5A
+  border-radius: 6px 0
 
 .link-download
   display: flex
@@ -382,3 +419,32 @@ h1
 .breadcrumb-nav
   width: 100%
   margin: 12px 0 37px
+
+.breadcrumb
+  width: 100%
+  padding: 0
+  border: none
+    radius: 0
+  margin: 0
+  font-size: 14px
+  font-family: $default-font
+  font-weight: normal
+  background: transparent
+  a
+    color: #6C7183
+    &:hover
+      color: $accent
+
+.breadcrumb-item.active
+  color: #6C7183
+
+.breadcrumb-item+.breadcrumb-item
+  padding-left: 5px
+  display: flex
+  align-items: center
+  &:before
+    padding-right: 5px
+    content: '»'
+    color: #6C7183
+
+

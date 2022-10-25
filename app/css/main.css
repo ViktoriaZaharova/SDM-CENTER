@@ -20,6 +20,9 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%; }
 
 .filter-button {
@@ -441,25 +444,127 @@
   padding: 5px 0 55px; }
 
 /*==========  section documents page end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
+/*==========  section form-settings ==========*/
+.form-settings .row {
+  margin: 0 -15px; }
+
+.form-settings .col, .form-settings .col-1, .form-settings .col-10, .form-settings .col-11, .form-settings .col-12, .form-settings .col-2, .form-settings .col-3, .form-settings .col-4, .form-settings .col-5, .form-settings .col-6, .form-settings .col-7, .form-settings .col-8, .form-settings .col-9, .form-settings .col-auto, .form-settings .col-lg, .form-settings .col-lg-1, .form-settings .col-lg-10, .form-settings .col-lg-11, .form-settings .col-lg-12, .form-settings .col-lg-2, .form-settings .col-lg-3, .form-settings .col-lg-4, .form-settings .col-lg-5, .form-settings .col-lg-6, .form-settings .col-lg-7, .form-settings .col-lg-8, .form-settings .col-lg-9, .form-settings .col-lg-auto, .form-settings .col-md, .form-settings .col-md-1, .form-settings .col-md-10, .form-settings .col-md-11, .form-settings .col-md-12, .form-settings .col-md-2, .form-settings .col-md-3, .form-settings .col-md-4, .form-settings .col-md-5, .form-settings .col-md-6, .form-settings .col-md-7, .form-settings .col-md-8, .form-settings .col-md-9, .form-settings .col-md-auto, .form-settings .col-sm, .form-settings .col-sm-1, .form-settings .col-sm-10, .form-settings .col-sm-11, .form-settings .col-sm-12, .form-settings .col-sm-2, .form-settings .col-sm-3, .form-settings .col-sm-4, .form-settings .col-sm-5, .form-settings .col-sm-6, .form-settings .col-sm-7, .form-settings .col-sm-8, .form-settings .col-sm-9, .form-settings .col-sm-auto, .form-settings .col-xl, .form-settings .col-xl-1, .form-settings .col-xl-10, .form-settings .col-xl-11, .form-settings .col-xl-12, .form-settings .col-xl-2, .form-settings .col-xl-3, .form-settings .col-xl-4, .form-settings .col-xl-5, .form-settings .col-xl-6, .form-settings .col-xl-7, .form-settings .col-xl-8, .form-settings .col-xl-9, .form-settings .col-xl-auto {
+  padding: 0 15px; }
+
+.form-settings .select-my {
+  background: #F6F8FE url("../img/arrow-select.svg") calc(100% - 19px) center no-repeat;
+    background-size: 10px; }
+
+.form-settings .label-select {
+  max-width: 449px; }
+
+.form-settings .datepicker-item__icon {
+  position: relative; }
+
+.form-settings .datepicker-item {
+  width: 50%; }
+  .form-settings .datepicker-item input {
+    width: 100%;
+    padding: 0 20px; }
+
+.form-settings .datepicker-wrapper {
+  width: calc(50% - 10px); }
+
+.main-box {
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+  border: 1px solid #DFE4FF;
+    border-radius: 10px;
+  padding: 27px 50px;
+  margin: 0 0 32px; }
+  .main-box:last-child {
+    margin: 0; }
+  .main-box h1 {
+    margin: 0 0 40px;
+    color: #E42626; }
+  .main-box .title-wrapper {
+    margin: 0 0 40px; }
+    .main-box .title-wrapper h3 {
+      margin: 0 auto 0 0;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+
+.main-box-item h3 {
+  width: 100%;
+  color: #4A4A4A;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0 0 40px; }
+
+.attention-form {
+  color: #E42626;
+  font-size: 14px; }
+
+.btn-add-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 45px;
+  width: 76px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#BED895), to(#BED895)), #52A321;
+  background: linear-gradient(0deg, #BED895, #BED895), #52A321;
+  border: 1px solid #37810B;
+  border-radius: 1px 10px 0px 1px; }
+  .btn-add-list:before, .btn-add-list:after {
+    content: '';
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #2B6706;
+    top: 50%;
+    left: 50%; }
+  .btn-add-list:before {
+    width: 2px;
+    height: 20px; }
+  .btn-add-list:after {
+    width: 20px;
+    height: 2px; }
+
+.btn-add-property {
+  background: #BDE4FE;
+  font-size: 18px;
+  padding: 8.5px 15px;
+  margin: 34px 0 0; }
+  .btn-add-property .btn-icon {
+    margin: 0 13px 0 0; }
+
+.table-property thead th {
+  text-align: left;
+  padding: 13px 42px; }
+
+.table-property th, .table-property td {
+  padding: 8px 42px;
+  text-align: left; }
+
+.table-property p {
+  max-width: none; }
+
+.main-box-info h3 {
+  margin: 0 0 13px; }
+
+.main-box-info .attention-form {
+  margin: 0 0 19px; }
+
+.ui-timepicker-standard a {
+  border: none;
+  width: 100%;
+  text-align: center; }
+  .ui-timepicker-standard a:hover {
+    background: #0B4275;
+    color: #fff;
+    border: none; }
+
+.ui-timepicker-standard .ui-state-hover {
+  background: #0B4275;
+  color: #fff;
+  border: none; }
+
+/*==========  section form-settings end  ==========*/

@@ -49,7 +49,11 @@ $( function() {
 
         return date;
     }
+
 } );
+
+$('.timepicker1').timepicker();
+
 
 // активная ссылка меню
 $('.menu li a').each(function () {
